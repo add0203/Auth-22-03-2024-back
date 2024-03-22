@@ -6,7 +6,8 @@ const { UnauthenticatedError, BadRequestError } = require("../errors/index");
 
 exports.signIn = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    // const { email, password } = req.body;
+    const { email, password } = req.params;
     if (!email || !password || !password.length >= 6) {
       return res.status(400).json({ success: false, mess: "field missing" });
     }
@@ -37,7 +38,8 @@ exports.signIn = async (req, res) => {
 exports.register = async (req, res) => {
   try {
     const { email, password } = req.body;
-    if (!password || !email || !password.length >= 6) {
+    // const { email, password } = req.params;
+    if (!email || !password || !password.length >= 6) {
       // return res.status(400).json({ mess: "feild is invalid or missing" });
       throw new UnauthenticatedError("feild is invalid or missing");
     }
