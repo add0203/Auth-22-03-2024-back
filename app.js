@@ -17,7 +17,7 @@ const errorHandlerMiddleware = require("./middleware/error-handler");
 const fileUpload = require("express-fileupload");
 
 const corsOptions = {
-  origin: "http://127.0.0.1:5501",
+  origin: "https://auth-22-03-2024-back.onrender.com/",
 };
 
 app.use(cors(corsOptions));
