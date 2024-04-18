@@ -4,7 +4,7 @@ const connectDB = (url) => {
   mongoose.set("strictQuery", true);
   mongoose.connect(url, {
     useUnifiedTopology: true,
-    dbName: "blinkit",
+    dbName: "blinkit-pro",
   });
   console.log("DB Connected");
 };
