@@ -16,9 +16,13 @@ const errorHandlerMiddleware = require("./middleware/error-handler");
 //
 const fileUpload = require("express-fileupload");
 
-const corsOptions = {
-  origin: "https://auth-22-03-2024-back.onrender.com/",
-};
+
+app.use(cors({
+  origin: 'https://auth-22-03-2024-back.onrender.com'
+}));
+// const corsOptions = {
+//   origin: "https://auth-22-03-2024-back.onrender.com/",
+// };
 
 app.use(cors(corsOptions));
 
