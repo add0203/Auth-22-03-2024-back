@@ -6,8 +6,8 @@ const { UnauthenticatedError, BadRequestError } = require("../errors/index");
 
 exports.signIn = async (req, res) => {
   try {
-    // const { email, password } = req.body;
-    const { email, password } = req.params;
+    const { email, password } = req.body;
+    // const { email, password } = req.params;
     if (!email || !password || !password.length >= 6) {
       return res.status(400).json({ success: false, mess: "field missing" });
     }
