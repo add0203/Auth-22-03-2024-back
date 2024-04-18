@@ -21,7 +21,8 @@ const fileUpload = require("express-fileupload");
 //   origin: 'https://auth-22-03-2024-back.onrender.com'
 // }));
 const corsOptions = {
-  origin: "https://auth-22-03-2024-back.onrender.com",
+  // origin: "https://auth-22-03-2024-back.onrender.com",
+   origin: "http://127.0.0.1:5501",
 };
 
 app.use(cors(corsOptions));
