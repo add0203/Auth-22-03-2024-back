@@ -25,8 +25,6 @@ exports.signIn = async (req, res) => {
     userExists.token = Token;
     await userExists.save();
     console.log(userExists.token);
-     req.session.loggedin = true;
-    req.session.username = username;
     res
       .status(200)
       .json({ name: userExists.firstName, token: userExists.token });
