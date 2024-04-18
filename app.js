@@ -23,6 +23,7 @@ const fileUpload = require("express-fileupload");
 const corsOptions = {
   // origin: "https://auth-22-03-2024-back.onrender.com",
    origin: "http://127.0.0.1:5501",
+  origin : "https://auth-22-03-24-add0203s-projects.vercel.app"
 };
 
 app.use(cors(corsOptions));
